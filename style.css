@@ -1,0 +1,49 @@
+@import "nullstyle.css";
+.link-2, .link {
+  border-bottom: 5px solid red;
+  font-size: 100px;
+}
+
+body {
+  margin: 0;
+}
+
+.hello {
+  width: 31.25%;
+  padding-top: 50px;
+  color: #123321;
+  font-size: 15px;
+}
+.hello span {
+  color: red;
+}
+.hello > p {
+  color: green;
+}
+.hello .hello__text {
+  font-size: 80px;
+}
+.hello.hello--big {
+  font-size: 80px;
+}
+
+.link {
+  color: black;
+  text-decoration: underline;
+}
+.hello .link {
+  font-size: 80px;
+}
+.link:hover {
+  text-decoration: none;
+}
+.link:after {
+  content: "";
+}
+
+.link-2 {
+  font-size: "100px";
+  color: green;
+}
+
+/*# sourceMappingURL=style.css.map */

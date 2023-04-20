@@ -1,0 +1,58 @@
+@import "nullstyle.css";
+$fz:80px;
+$color: #123321;
+
+
+%tplborder{
+  border-bottom: 5px solid red;
+  font-size: 100px;
+}
+
+@mixin fontz($f,$c){
+  font-size: $f;
+  color:$c;
+}
+
+body{
+  margin: 0;
+}
+.hello{
+  width: 300px/960px*100%;
+  padding-top: 50px;
+
+  color: $color;
+  font-size: 15px;
+  span{
+    color: red;
+  }
+  >p{
+    color: green;
+  }
+  .hello__text{
+    font-size: $fz;
+  }
+  &.hello--big{
+    font-size: $fz;
+  }
+
+}
+
+.link{
+  color: black;
+  text-decoration: underline;
+  .hello &{
+    font-size: $fz;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+  &:after{
+    content: '';
+  }
+  @extend %tplborder;
+}
+
+.link-2{
+  @include fontz('100px',green);
+  @extend %tplborder;
+}
